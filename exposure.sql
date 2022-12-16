@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `exposure` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `exposure`;
--- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: exposure
 -- ------------------------------------------------------
--- Server version	8.0.31-0ubuntu0.22.04.1
+-- Server version	8.0.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -103,6 +103,7 @@ CREATE TABLE `album` (
 
 LOCK TABLES `album` WRITE;
 /*!40000 ALTER TABLE `album` DISABLE KEYS */;
+INSERT INTO `album` VALUES (1,'Paris Holidays',NULL),(4,'Christmas','Christmas with the family in Thessaloniki'),(5,'Athens',''),(7,'Hiking weekend',NULL);
 /*!40000 ALTER TABLE `album` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +139,7 @@ CREATE TABLE `asset` (
 
 LOCK TABLES `asset` WRITE;
 /*!40000 ALTER TABLE `asset` DISABLE KEYS */;
-INSERT INTO `asset` VALUES (1,'/assets/1/1.jpg','2022-12-16 15:12:18',0,529145,'Thessaloniki',1080,1920,'The sky','Canon',NULL,1),(7,'/assets/1/7.jpg','2022-12-16 17:14:20',0,110259,'',400,400,'meme','','/thumbnails/1/7.jpg',1),(21,'/assets/2/21.png','2022-12-16 15:13:18',0,1190523,'Nafplio',2000,3000,'','','/thumbnails/2/21.jpg',2),(54,'/assets/3/54.mp4','2022-12-16 15:15:18',1,380541096,'',3840,2160,'','Canon',NULL,3);
+INSERT INTO `asset` VALUES (1,'/assets/1/1.jpg','2022-12-16 15:12:18',0,529145,'Thessaloniki',1080,1920,'The sky','Canon','/thumbnails/1/1.jpg',1),(2,'/assets/1/2.png','2021-10-01 12:30:40',1,478008,NULL,3024,4032,NULL,'Pixel 6a',NULL,2),(3,'/assets/2/3.mp4','2020-02-20 22:51:01',1,156234890,'Athens',1080,1920,NULL,'S10 ',NULL,2),(4,'/assets/2/4.jpg','2015-10-06 23:18:02',0,123154,NULL,1080,2340,'Party',NULL,'/thumbnails/2/4.jpg',4),(5,'/assets/1/5.png','2018-11-09 12:50:22',1,234146,NULL,3024,4032,NULL,NULL,NULL,3),(6,'/assets/3/6.mp4','2022-06-20 18:59:32',1,234146734,'Kordelio',3840,2160,NULL,'iPhone 7',NULL,4),(7,'/assets/1/7.jpg','2022-12-16 17:14:20',0,110259,'',400,400,'meme','','/thumbnails/1/7.jpg',1),(8,'/assets/2/8.jpg','2008-08-15 14:44:39',0,22436,NULL,800,600,NULL,NULL,NULL,3),(9,'/assets/2/9.png','2018-03-25 12:54:19',1,531231,'Athens',3000,4000,NULL,NULL,'/thumbnails/2/9.jpg',4),(10,'/assets/2/10.mp4','2019-01-12 10:29:50',0,24579124,NULL,1920,1080,NULL,'Huawei Mate 20',NULL,3),(11,'/assets/1/11.mp4','2017-07-10 12:19:52',0,12908732,'Athens',3840,2160,'','Canon EOS 70D',NULL,2),(12,'/assets/2/12.png','2014-05-08 08:24:40',0,234135,NULL,1080,1920,NULL,NULL,'/thumbnails/2/12.jpg',1),(13,'/assets/3/13.jpg','2011-03-12 19:30:20',1,123462,'Thessaloniki',720,1080,NULL,NULL,NULL,1),(14,'/assets/2/14.mp4','2019-02-02 10:50:49',1,312643422,'Evosmos',1920,1080,NULL,'iPhone se','/thumbnails/2/14.jpg',4),(15,'/assets/1/15.jpg','2010-03-03 16:09:12',1,423563,NULL,3024,4032,NULL,'SM-G975F',NULL,2),(21,'/assets/2/21.png','2022-03-16 15:13:18',0,1190523,'Nafplio',2000,3000,'','','/thumbnails/2/21.jpg',2),(30,'/assets/1/30.jpg','2022-05-09 09:34:27',0,26780,NULL,1080,1920,NULL,NULL,NULL,3),(54,'/assets/3/54.mp4','2022-05-10 15:15:18',1,380541096,'Kavala',3840,2160,'','Canon',NULL,3);
 /*!40000 ALTER TABLE `asset` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +167,7 @@ CREATE TABLE `asset_has_person` (
 
 LOCK TABLES `asset_has_person` WRITE;
 /*!40000 ALTER TABLE `asset_has_person` DISABLE KEYS */;
-INSERT INTO `asset_has_person` VALUES (21,1);
+INSERT INTO `asset_has_person` VALUES (8,1),(21,1),(5,2),(2,3),(15,3),(1,4),(13,5);
 /*!40000 ALTER TABLE `asset_has_person` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +183,7 @@ CREATE TABLE `collection` (
   `createdAt` datetime NOT NULL,
   `thumbnail` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -191,6 +192,7 @@ CREATE TABLE `collection` (
 
 LOCK TABLES `collection` WRITE;
 /*!40000 ALTER TABLE `collection` DISABLE KEYS */;
+INSERT INTO `collection` VALUES (1,'2022-12-16 15:12:14','/thumbnails/1/1.jpg'),(2,'2020-09-11 12:11:38',NULL),(3,'2019-01-02 09:39:29',NULL),(4,'2010-04-10 17:24:19','/thumbnails/2/4.jpg'),(5,'2015-06-09 23:21:10','/thumbnails/3/5.jpg'),(6,'2027-07-02 10:49:01',NULL),(7,'2017-08-13 11:11:11','/thumbnails/2/7.jpg'),(8,'2012-09-20 09:37:27',NULL),(9,'2021-10-10 17:50:09','/thumbnails/1/9.jpg');
 /*!40000 ALTER TABLE `collection` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,6 +220,7 @@ CREATE TABLE `collection_has_asset` (
 
 LOCK TABLES `collection_has_asset` WRITE;
 /*!40000 ALTER TABLE `collection_has_asset` DISABLE KEYS */;
+INSERT INTO `collection_has_asset` VALUES (4,1),(5,2),(5,3),(7,4),(1,5),(7,6),(4,7),(1,8),(7,9),(1,10),(5,11),(4,12),(4,13),(7,14);
 /*!40000 ALTER TABLE `collection_has_asset` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -244,7 +247,7 @@ CREATE TABLE `image` (
 
 LOCK TABLES `image` WRITE;
 /*!40000 ALTER TABLE `image` DISABLE KEYS */;
-INSERT INTO `image` VALUES (1,100,400,NULL),(7,NULL,NULL,NULL),(21,80,400,55);
+INSERT INTO `image` VALUES (1,100,400,53),(2,100,2230,40),(4,25,5667,40),(5,100,1661,20),(7,NULL,NULL,NULL),(8,200,400,43),(9,100,200,60),(12,NULL,NULL,NULL),(13,50,400,41),(15,50,125,38),(21,80,400,55),(30,171,40,20);
 /*!40000 ALTER TABLE `image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -271,6 +274,7 @@ CREATE TABLE `memory` (
 
 LOCK TABLES `memory` WRITE;
 /*!40000 ALTER TABLE `memory` DISABLE KEYS */;
+INSERT INTO `memory` VALUES (2,'Jump back in','Olympos',0),(3,'Underwater Moments','Epanomi',1),(6,'Trip to Italy','Rome-Naples',1),(9,'Summer 2020','Santorini',0);
 /*!40000 ALTER TABLE `memory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,7 +289,7 @@ CREATE TABLE `person` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,7 +298,7 @@ CREATE TABLE `person` (
 
 LOCK TABLES `person` WRITE;
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
-INSERT INTO `person` VALUES (1,'Giota');
+INSERT INTO `person` VALUES (1,'Giota'),(2,'Mitsos'),(3,'Antonis'),(4,'Evi'),(5,'Efthi'),(6,'Crhi');
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -312,7 +316,7 @@ CREATE TABLE `user` (
   `password` varchar(45) NOT NULL,
   `createdAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,7 +325,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Antonis','keremidis@auth.gr','pass1','2022-12-16 15:26:35'),(2,'Dimitris','kapralos@auth.gr','pass2','2022-12-16 15:26:35'),(3,'Evi','nestoropo@auth.gr','pass3','2022-12-16 15:27:20');
+INSERT INTO `user` VALUES (1,'Antonis','keremidis@auth.gr','pass1','2022-12-16 15:26:35'),(2,'Dimitris','kapralos@auth.gr','pass2','2022-12-16 15:26:35'),(3,'Evi','nestoropo@auth.gr','pass3','2022-12-16 15:27:20'),(4,'Giorgos','giorgos@gmail.com','pass4','2022-12-16 16:08:10');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -349,6 +353,7 @@ CREATE TABLE `user_collaborates_in_album` (
 
 LOCK TABLES `user_collaborates_in_album` WRITE;
 /*!40000 ALTER TABLE `user_collaborates_in_album` DISABLE KEYS */;
+INSERT INTO `user_collaborates_in_album` VALUES (4,1),(5,1),(5,2),(1,3),(5,3),(7,4);
 /*!40000 ALTER TABLE `user_collaborates_in_album` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,7 +379,7 @@ CREATE TABLE `video` (
 
 LOCK TABLES `video` WRITE;
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
-INSERT INTO `video` VALUES (54,30,5122);
+INSERT INTO `video` VALUES (3,60,671),(6,1680,4223),(10,1080,412),(11,1080,232),(14,3025,2314),(54,30,5122);
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -390,7 +395,7 @@ UNLOCK TABLES;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`antonis`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `Albums by User` AS select `user`.`name` AS `name`,`album`.`title` AS `title` from ((`album` join `user_collaborates_in_album` on((`album`.`collection_id` = `user_collaborates_in_album`.`album_collection_id`))) join `user` on((`user`.`id` = `user_collaborates_in_album`.`user_id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -408,7 +413,7 @@ UNLOCK TABLES;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`antonis`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `Collections by Asset` AS select `collection`.`id` AS `collectionID`,`asset`.`id` AS `assetID` from ((`asset` join `collection_has_asset` on((`asset`.`id` = `collection_has_asset`.`asset_id`))) join `collection` on((`collection_has_asset`.`collection_id` = `collection`.`id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -426,7 +431,7 @@ UNLOCK TABLES;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`antonis`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`root`@`%` SQL SECURITY DEFINER */
 /*!50001 VIEW `Person by Assets` AS select `person`.`id` AS `pid`,`person`.`name` AS `name`,`asset`.`id` AS `Aid` from ((`person` join `asset_has_person` on((`person`.`id` = `asset_has_person`.`person_id`))) join `asset` on((`asset`.`id` = `asset_has_person`.`asset_id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -441,4 +446,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-16 15:42:31
+-- Dump completed on 2022-12-16 20:41:14

@@ -182,7 +182,10 @@ CREATE TABLE `collection` (
   `id` int NOT NULL AUTO_INCREMENT,
   `createdAt` datetime NOT NULL,
   `thumbnail` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_collection_user1_idx` (`user_id`),
+  CONSTRAINT `fk_collection_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -192,7 +195,7 @@ CREATE TABLE `collection` (
 
 LOCK TABLES `collection` WRITE;
 /*!40000 ALTER TABLE `collection` DISABLE KEYS */;
-INSERT INTO `collection` VALUES (1,'2022-12-16 15:12:14','/thumbnails/1/1.jpg'),(2,'2020-09-11 12:11:38',NULL),(3,'2019-01-02 09:39:29',NULL),(4,'2010-04-10 17:24:19','/thumbnails/2/4.jpg'),(5,'2015-06-09 23:21:10','/thumbnails/3/5.jpg'),(6,'2027-07-02 10:49:01',NULL),(7,'2017-08-13 11:11:11','/thumbnails/2/7.jpg'),(8,'2012-09-20 09:37:27',NULL);
+INSERT INTO `collection` VALUES (1,'2022-12-16 15:12:14','/thumbnails/1/1.jpg',0),(2,'2020-09-11 12:11:38',NULL,1),(3,'2019-01-02 09:39:29',NULL,2),(4,'2010-04-10 17:24:19','/thumbnails/2/4.jpg',4),(5,'2015-06-09 23:21:10','/thumbnails/3/5.jpg',4),(6,'2027-07-02 10:49:01',NULL,1),(7,'2017-08-13 11:11:11','/thumbnails/2/7.jpg',3),(8,'2012-09-20 09:37:27',NULL,0);
 /*!40000 ALTER TABLE `collection` ENABLE KEYS */;
 UNLOCK TABLES;
 

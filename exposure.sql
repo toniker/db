@@ -139,7 +139,7 @@ CREATE TABLE `asset` (
 
 LOCK TABLES `asset` WRITE;
 /*!40000 ALTER TABLE `asset` DISABLE KEYS */;
-INSERT INTO `asset` VALUES (1,'/assets/1/1.jpg','2022-12-16 15:12:18',0,529145,'Thessaloniki',1080,1920,'The sky','Canon','/thumbnails/1/1.jpg',1),(2,'/assets/1/2.png','2021-10-01 12:30:40',1,478008,NULL,3024,4032,NULL,'Pixel 6a',NULL,2),(3,'/assets/2/3.mp4','2020-02-20 22:51:01',1,156234890,'Athens',1080,1920,NULL,'S10 ',NULL,2),(4,'/assets/2/4.jpg','2015-10-06 23:18:02',0,123154,NULL,1080,2340,'Party',NULL,'/thumbnails/2/4.jpg',4),(5,'/assets/1/5.png','2018-11-09 12:50:22',1,234146,NULL,3024,4032,NULL,NULL,NULL,3),(6,'/assets/3/6.mp4','2022-06-20 18:59:32',1,234146734,'Kordelio',3840,2160,NULL,'iPhone 7',NULL,4),(7,'/assets/1/7.jpg','2022-12-16 17:14:20',0,110259,'',400,400,'meme','','/thumbnails/1/7.jpg',1),(8,'/assets/2/8.jpg','2008-08-15 14:44:39',0,22436,NULL,800,600,NULL,NULL,NULL,3),(9,'/assets/2/9.png','2018-03-25 12:54:19',1,531231,'Athens',3000,4000,NULL,NULL,'/thumbnails/2/9.jpg',4),(10,'/assets/2/10.mp4','2019-01-12 10:29:50',0,24579124,NULL,1920,1080,NULL,'Huawei Mate 20',NULL,3),(11,'/assets/1/11.mp4','2017-07-10 12:19:52',0,12908732,'Athens',3840,2160,'','Canon EOS 70D',NULL,2),(12,'/assets/2/12.png','2014-05-08 08:24:40',0,234135,NULL,1080,1920,NULL,NULL,'/thumbnails/2/12.jpg',1),(13,'/assets/3/13.jpg','2011-03-12 19:30:20',1,123462,'Thessaloniki',720,1080,NULL,NULL,NULL,1),(14,'/assets/2/14.mp4','2019-02-02 10:50:49',1,312643422,'Evosmos',1920,1080,NULL,'iPhone se','/thumbnails/2/14.jpg',4),(15,'/assets/1/15.jpg','2010-03-03 16:09:12',1,423563,NULL,3024,4032,NULL,'SM-G975F',NULL,2),(17,'/assets/3/17.jpg','2020-07-05 10:12:29',0,124544,'Santorini',1080,1920,NULL,NULL,'/thumbnails/3/17.jpg',4),(18,'/assets/3/18.jpg','2020-07-05 18:25:09',1,12354,NULL,3024,4032,NULL,NULL,'/thumbnails/3/18.jpg',4),(21,'/assets/2/21.png','2022-03-16 15:13:18',0,1190523,'Nafplio',2000,3000,'','','/thumbnails/2/21.jpg',2),(24,'/assets/2/24.png','2020-05-07 20:12:59',1,45632,NULL,2000,3000,NULL,'iPhone 13',NULL,1),(30,'/assets/1/30.jpg','2022-05-09 09:34:27',0,26780,NULL,1080,1920,NULL,NULL,NULL,3),(54,'/assets/3/54.mp4','2022-05-10 15:15:18',1,380541096,'Rome',3840,2160,'','Canon',NULL,3);
+INSERT INTO `asset` VALUES (1,'/assets/1/1.jpg','2022-12-16 15:12:18',0,529145,'Thessaloniki',1080,1920,'The sky','Canon','/thumbnails/1/1.jpg',1),(2,'/assets/1/2.png','2021-10-01 12:30:40',1,478008,NULL,3024,4032,NULL,'Pixel 6a',NULL,2),(3,'/assets/2/3.mp4','2020-02-20 22:51:01',1,156234890,'Athens',1080,1920,NULL,'S10 ',NULL,2),(4,'/assets/2/4.jpg','2015-10-06 23:18:02',0,123154,NULL,1080,2340,'Party',NULL,'/thumbnails/2/4.jpg',4),(5,'/assets/1/5.png','2018-11-09 12:50:22',1,234146,NULL,3024,4032,NULL,NULL,NULL,3),(6,'/assets/3/6.mp4','2022-06-20 18:59:32',1,234146734,'Kordelio',3840,2160,NULL,'iPhone 7',NULL,4),(7,'/assets/1/7.jpg','2022-12-16 17:14:20',0,110259,'',400,400,'meme','','/thumbnails/1/7.jpg',1),(8,'/assets/2/8.jpg','2008-08-15 14:44:39',0,22436,NULL,800,600,NULL,NULL,NULL,3),(9,'/assets/2/9.png','2018-03-25 12:54:19',1,531231,'Athens',3000,4000,NULL,NULL,'/thumbnails/2/9.jpg',4),(10,'/assets/2/10.mp4','2019-01-12 10:29:50',0,24579124,NULL,1920,1080,NULL,'Huawei Mate 20',NULL,3),(11,'/assets/1/11.mp4','2017-07-10 12:19:52',0,12908732,'Athens',3840,2160,'','Canon EOS 70D',NULL,2),(12,'/assets/2/12.png','2014-05-08 08:24:40',0,234135,NULL,1080,1920,NULL,NULL,'/thumbnails/2/12.jpg',1),(13,'/assets/3/13.jpg','2011-03-12 19:30:20',1,123462,'Thessaloniki',720,1080,NULL,NULL,NULL,1),(14,'/assets/2/14.mp4','2019-02-02 10:50:49',1,312643422,'Evosmos',1920,1080,NULL,'iPhone se','/thumbnails/2/14.jpg',4),(15,'/assets/1/15.jpg','2010-03-03 16:09:12',1,423563,NULL,3024,4032,NULL,'SM-G975F',NULL,2),(17,'/assets/3/17.jpg','2020-07-05 10:12:29',0,124544,'Santorini',1080,1920,NULL,NULL,'/thumbnails/3/17.jpg',4),(18,'/assets/3/18.jpg','2020-07-05 18:25:09',1,12354,NULL,3024,4032,NULL,NULL,'/thumbnails/3/18.jpg',4),(21,'/assets/2/21.png','2022-03-16 15:13:18',0,1190523,'Nafplio',2000,3000,'','','/thumbnails/2/21.jpg',2),(22,'/assets/1/22.png','2020-05-01 17:12:58',0,324356,NULL,1080,1920,NULL,NULL,'/thumbnails/1/22.jpg',1),(23,'/assets/3/23.mp4','2015-08-03 09:31:39',1,234251235,NULL,3840,2160,NULL,'Pixel 7',NULL,3),(24,'/assets/2/24.png','2020-05-07 20:12:59',1,45632,NULL,2000,3000,NULL,'iPhone 13',NULL,1),(25,'/assets/2/25.mp4','2018-02-06 19:13:10',0,223413134,NULL,1920,1080,NULL,NULL,NULL,4),(26,'/assets/2/26.jpg','2019-01-09 20:47:16',1,431235,'Larisa',720,1080,NULL,'Canon EOS 70D','/thumbnails/2/26.jpg',2),(30,'/assets/1/30.jpg','2022-05-09 09:34:27',0,26780,NULL,1080,1920,NULL,NULL,NULL,3),(54,'/assets/3/54.mp4','2022-05-10 15:15:18',1,380541096,'Rome',3840,2160,'','Canon','',3);
 /*!40000 ALTER TABLE `asset` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +195,7 @@ CREATE TABLE `collection` (
 
 LOCK TABLES `collection` WRITE;
 /*!40000 ALTER TABLE `collection` DISABLE KEYS */;
-INSERT INTO `collection` VALUES (1,'2022-12-16 15:12:14','/thumbnails/1/1.jpg',0),(2,'2020-09-11 12:11:38',NULL,1),(3,'2019-01-02 09:39:29',NULL,2),(4,'2010-04-10 17:24:19','/thumbnails/2/4.jpg',4),(5,'2015-06-09 23:21:10','/thumbnails/3/5.jpg',4),(6,'2027-07-02 10:49:01',NULL,1),(7,'2017-08-13 11:11:11','/thumbnails/2/7.jpg',3),(8,'2012-09-20 09:37:27',NULL,0);
+INSERT INTO `collection` VALUES (1,'2022-12-16 15:12:14','/thumbnails/1/1.jpg',3),(2,'2020-09-11 12:11:38',NULL,1),(3,'2019-01-02 09:39:29',NULL,2),(4,'2010-04-10 17:24:19','/thumbnails/2/4.jpg',1),(5,'2015-06-09 23:21:10','/thumbnails/3/5.jpg',2),(6,'2027-07-02 10:49:01',NULL,3),(7,'2017-08-13 11:11:11','/thumbnails/2/7.jpg',4),(8,'2012-09-20 09:37:27',NULL,4);
 /*!40000 ALTER TABLE `collection` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -340,8 +340,27 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `user_AFTER_INSERT` AFTER INSERT ON `user` FOR EACH ROW BEGIN
-  IF (NEW.name = '' or NEW.email = '' or NEW.password = '') THEN
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `user_BEFORE_INSERT` BEFORE INSERT ON `user` FOR EACH ROW BEGIN
+ IF (NEW.name = '' or NEW.email = '' or NEW.password = '') THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Name or Email or Password cannot be empty';
+  END IF; 
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `user_BEFORE_UPDATE` BEFORE UPDATE ON `user` FOR EACH ROW BEGIN
+ IF (NEW.name = '' or NEW.email = '' or NEW.password = '') THEN
     SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Name or Email or Password cannot be empty';
   END IF; 
 END */;;
@@ -468,4 +487,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-17 15:45:25
+-- Dump completed on 2022-12-18 15:13:42

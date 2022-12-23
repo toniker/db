@@ -3,8 +3,35 @@ version: "3.8"
 services:
   app:
    container_name: "exposure"
+   user: 1000:1000
    image: exposure
+   depends_on:
+     - db
+   environment:
+     - MYSQL_USER=root
+     - MYSQL_PASSWORD=root
+     - MYSQL_DATABASE=exposure
+     - REACT_APP_SERVER_PORT=8080
    build:
      context: .
+   command: ["sh", "-c", "mysql -h mysql -u root -proot < /database/exposure.sql"]
    ports:
      - "8080:80"
+
+  db:
+    container_name: "exposure_db"
+    user: 1000:1000
+    image: mysql
+    volumes:
+      - ./database:/database
+      - ./database/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=exposure
+      - REACT_APP_SERVER_PORT=8080
+
+networks:
+  default:
+    name: "exposure-net"
